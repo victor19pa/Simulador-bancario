@@ -126,21 +126,7 @@ public class Cursor {
 				if(p==PRIMERO()){
 				memoria[Cabeza] = false;
 				Cabeza = arreglo[Cabeza].Encadenamiento;
-			}/*else if(p==FIN()){
-				int in = 0;
-				for(int k = 0; k < MAX; k++){
-					if(arreglo[k].Encadenamiento==-1){
-						in = k;
-						break;
-					}
-				}
-				//System.out.println("------in " +in);
-				//index = indexActual();
-				arreglo[in].Encadenamiento = index;
-				
-				arreglo[index].Encadenamiento = -1;
-				memoria[index] = true;
-			}*/else{
+			}else{
 				int in = Cabeza, anter = in, sig = arreglo[in].Encadenamiento;
 				for(int k = 0; k < p-1; k++){
 					anter=in;

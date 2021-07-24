@@ -4,13 +4,11 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 
-import Principal.BancoS;
+//import Principal.BancoS;
 
 public class Movimiento {
 	private int x;
 	private int y;
-	private String llaveImagen;
-	
 	private int cont1 = 1;
 	private int cont2 = 1;
 	
@@ -19,8 +17,6 @@ public class Movimiento {
 	public Movimiento( int x, int y, String llaveImagen) {
 		this.x = x;
 		this.y = y;
-
-		this.llaveImagen = llaveImagen;
 	}
 
 	public int getX() {

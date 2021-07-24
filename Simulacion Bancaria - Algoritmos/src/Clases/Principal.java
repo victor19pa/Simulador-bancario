@@ -1,13 +1,13 @@
 package Clases;
 
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 public class Principal {
 
 	public static void main(String[] args) {
 		Lista listaA = new Lista();
-		Pila pilaA = new Pila();
-		Cola colaA = new Cola();
+		//Pila pilaA = new Pila();
+		//Cola colaA = new Cola();
 		//colaA.PONE_EN_COLA(new Cliente(2,2,3));
 		/*int opcion = 0;
 		do{

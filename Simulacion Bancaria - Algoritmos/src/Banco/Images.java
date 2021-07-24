@@ -4,7 +4,7 @@ import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.awt.image.ImageObserver;
 
-import Principal.BancoS;
+//import Principal.BancoS;
 
 public class Images {
 	int x;

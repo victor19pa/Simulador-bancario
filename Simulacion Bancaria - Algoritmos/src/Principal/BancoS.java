@@ -36,7 +36,7 @@ public class BancoS extends Canvas implements KeyListener{
 	
 	private HashMap<String,BufferedImage> imagenes = new HashMap<String,BufferedImage>();
 	private HashMap<String,BufferedImage> movCliente = new HashMap<String,BufferedImage>();
-	private HashMap<Integer,BufferedImage> clientes = new HashMap<Integer,BufferedImage>();
+	//private HashMap<Integer,BufferedImage> clientes = new HashMap<Integer,BufferedImage>();
 	
 	private Images fondo;
 	private Images posfondo;
@@ -227,6 +227,7 @@ public class BancoS extends Canvas implements KeyListener{
         		if((proc.c1==500)&&(proc.n1>=30)&&(proc.gente_en_Cola>=4)){
         			//proc.n1 = proc.random.nextInt(50);
         			proc.n1=0;
+					//logger.log("Soy yo "+proc.c1);
         			System.out.println(" It's me"+proc.c1);
         			proc.transaccion();
         		}
@@ -417,9 +418,9 @@ public class BancoS extends Canvas implements KeyListener{
             g2D.setColor(Color.GREEN);
             g2D.drawRect(40,490,900,240);
             g2D.setColor(Color.WHITE);
-            g2D.drawString(((""+mov.cerrado())), 50, 545);
-        	g2D.drawString((("Presione Barra Espaceadora")), 50, 620);
-        	g2D.drawString((("Para Abrir")), 50, 695);
+            g2D.drawString((""+mov.cerrado()), 50, 545);
+        	g2D.drawString(("Presione Barra Espaceadora"), 50, 620);
+        	g2D.drawString(("Para Abrir"), 50, 695);
         }else{
         	if(!mov.isCerrado()){
         		g2D.setFont(fuente1);
@@ -468,7 +469,7 @@ public class BancoS extends Canvas implements KeyListener{
     	   long now = System.nanoTime();
     	   long updateLength = now - lastLoopTime;
     	   lastLoopTime = now;
-    	   double delta = updateLength / ((double)OPTIMAL_TIME);
+    	   //double delta = updateLength / ((double)OPTIMAL_TIME);
     	   lastFpsTime += updateLength;
     	   fps++;
     	   if (lastFpsTime >= 1000000000){
@@ -484,7 +485,9 @@ public class BancoS extends Canvas implements KeyListener{
     	   
     	   //Aplicar la pausa.
     	   try{Thread.sleep((lastLoopTime-System.nanoTime() + OPTIMAL_TIME)/1000000 );} //Puede sustituir el valor de la pausa por un valor fijo
-    	   catch(Exception e){};
+    	   catch(Exception e){
+			   System.out.println("Funcionando");
+		   };
        }
     }
 		
